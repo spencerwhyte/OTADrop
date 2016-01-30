@@ -102,6 +102,13 @@
       top: 50%;
       transform: translateY(-50%);
     }
+    
+html, body {
+    margin: 0;
+    height: 100%;
+    
+}
+    
 </style>
     
 
@@ -131,9 +138,9 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" style="background-color:#233140;">
 
-
+	<div id="container">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -183,7 +190,7 @@
     </header>
 
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="text-center" >
         <div class="footer-above">
             <div class="container">
                 <div class="row">
@@ -229,13 +236,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
 
    
 
@@ -308,7 +308,8 @@
 	    });
 	    
 	</script>
-
+	
+	</div>
 </body>
 
 </html>
