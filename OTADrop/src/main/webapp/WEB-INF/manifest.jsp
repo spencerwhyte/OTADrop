@@ -23,7 +23,7 @@
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>${title} }</string>
+				<string>${title}</string>
 			</dict>
 		</dict>
 	</array>

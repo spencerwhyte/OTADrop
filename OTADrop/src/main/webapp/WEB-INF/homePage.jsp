@@ -199,29 +199,15 @@ html, body {
                         <p>Spencer Whyte</p>
                         <a href="mailto:spencerwhyte@gmail.com">spencerwhyte@gmail.com</a>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                     <div class="footer-col col-md-4">
                         <h3>About OTA Drop</h3>
                         <p>OTA Drop allows you to easily distribute your iOS applications over the air.</p>
+                    </div>
+                    
+                    <div class="footer-col col-md-4">
+                        <h3>Help</h3>
+                        <p>Make sure that your application is provisioned to run on the device(s). If you can't install it locally via iTunes/XCode, this tool isn't going to help!</p>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,7 @@ import com.spencerwhyte.model.App;
 	  name varchar (255),
 	  bundleid varchar (255),
 	  bundleversion varchar (255),
+	  buildNumber varchar (255),
 	  PRIMARY KEY (uuid)
 	);
 */
@@ -34,8 +35,8 @@ public class AppDAOImpl implements AppDAO {
 
 	@Override
 	public void add(App app) {
-		String sql = "INSERT INTO apps (uuid, name, bundleid, bundleversion) VALUES (?, ?, ?, ?)";
-		jdbcTemplate.update(sql, app.getUuid(), app.getName(), app.getBundleId(), app.getBundleVersion());
+		String sql = "INSERT INTO apps (uuid, name, bundleid, bundleversion, buildNumber) VALUES (?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql, app.getUuid(), app.getName(), app.getBundleId(), app.getBundleVersion(), app.getBuildNumber());
 	}
 
 	@Override
@@ -54,7 +55,8 @@ public class AppDAOImpl implements AppDAO {
 	            	String name = rs.getString("name");
 	            	String bundleid = rs.getString("bundleid");
 	            	String bundleversion = rs.getString("bundleversion");
-	                App app = new App(uuid, name, bundleid, bundleversion);
+	            	String buildNumber = rs.getString("buildNumber");
+	                App app = new App(uuid, name, bundleid, bundleversion, buildNumber);
 	                return app;
 	            }
 	 

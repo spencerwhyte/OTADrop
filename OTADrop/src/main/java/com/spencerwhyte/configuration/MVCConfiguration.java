@@ -1,10 +1,17 @@
 package com.spencerwhyte.configuration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.BufferedImageHttpMessageConverter;
+import org.springframework.http.converter.ByteArrayHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
@@ -32,6 +39,8 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/"); // Handle static resources
+		registry.addResourceHandler("/air/apps/**").addResourceLocations("file:/Users/spencerwhyte/temp/apps/"); // Handle static resources
+		registry.addResourceHandler("/air/images/**").addResourceLocations("file:/Users/spencerwhyte/temp/images/"); // Handle static resources
     }
 	
     @Bean
@@ -62,5 +71,7 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
     public AppDAO getContactDAO() {
         return new AppDAOImpl(getDataSource());
     }
+    
+
     
 }

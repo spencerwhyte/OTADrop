@@ -7,12 +7,14 @@ public class App {
 	private String name;
 	private String bundleId;
 	private String bundleVersion;
+	private String buildNumber;
 	
-	public App(String uuid, String name, String bundleId, String bundleVersion){
+	public App(String uuid, String name, String bundleId, String bundleVersion, String buildNumber){
 		this.setUuid(uuid);
 		this.setName(name);
 		this.setBundleId(bundleId);
 		this.setBundleVersion(bundleVersion);
+		this.setBuildNumber(buildNumber);
 	}
 
 	public String getUuid() {
@@ -46,8 +48,13 @@ public class App {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
+
+	public String getBuildNumber() {
+		return buildNumber;
+	}
+
+	public void setBuildNumber(String buildNumber) {
+		this.buildNumber = buildNumber;
+	}
 	
 }
